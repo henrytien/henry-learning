@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Henry Learning</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="Description">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+</head>
+
+<body>
+  <div id="app"></div>
+</body>
+<script src="//cdn.jsdelivr.net/npm/docsify-edit-on-github"></script>
+<script>
+  window.$docsify = {
+    name: 'Henry Learning',
+    repo: 'https://github.com/henrytien/henry-learning',
+
+    loadSidebar: true,
+    subMaxLevel: 3,
+
+    loadNavbar: true,
+    mergeNavbar: true,
+    // cover
+    // onlyCover: true,
+
+    auto2top: true,
+
+    // docsify-pagination
+    pagination: {
+      crossChapter: true,
+      crossChapterText: true,
+    },
+
+    // click to copy.
+    copyCode: {
+      buttonText: {
+        '/zh/': '点击复制',
+        '/en/': 'Copy to clipboard',
+        '/': 'Copy to clipboard',
+      },
+      errorText: {
+        '/zh/': '错误',
+        '/en/': 'Error',
+        '/': 'Error',
+      },
+      successText: {
+        '/zh/': '复制成功',
+        '/en': 'Copied',
+        '/': 'Copied',
+      },
+    },
+    markdown: {
+      renderer: {
+        code: function (code, lang) {
+          if (lang === "mermaid") {
+            return (
+              '<div class="mermaid">' + mermaid.render('mermaid-svg-' + num++, code) + "</div>"
+            );
+          }
+          return this.origin.code.apply(this, arguments);
+        }
+      }
+    },
+
+    // edit-on-gitlab
+    plugins: [
+      // 末尾的/是必要的
+      EditOnGithubPlugin.create(
+        'https://github.com/henrytien/henry-learning/',
+        null,
+        function (file) {
+          if (file.indexOf('en') === -1) {
+            return '编辑'
+          } else {
+            return 'Edit on Github'
+          }
+        }
+      )
+    ],
+
+    plantuml: {
+      skin: 'classic',
+      // "plantuml.render": "PlantUMLServer",
+    },
+
+    search: {
+      noData: {
+        '/': 'No results!',
+        '/zh-cn/': '没有结果!',
+        '/zh-tw/': '沒有結果!',
+      },
+      paths: 'auto',
+      placeholder: {
+        '/': 'Search',
+        '/zh-cn/': '搜索',
+        '/zh-tw/': '搜索',
+      }
+    },
+  }
+</script>
+<!-- Docsify v4 -->
+<script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+<!-- <script src="//cdn.jsdelivr.net/npm/docsify@latest/lib/docsify.min.js"></script> -->
+<script src="//cdn.jsdelivr.net/npm/docsify@latest/lib/plugins/search.min.js"></script>
+
+<!-- Medium's image zoom -->
+<script src="//cdn.jsdelivr.net/npm/docsify@latest/lib/plugins/zoom-image.min.js"></script>
+
+<!-- code highlight -->
+<script src="//unpkg.com/prismjs@1.27.0/components/prism-bash.min.js"></script>
+<script src="//unpkg.com/prismjs@1.27.0/components/prism-protobuf.min.js"></script>
+<script src="//unpkg.com/prismjs@1.27.0/components/prism-csharp.min.js"></script>
+<script src="//unpkg.com/prismjs@1.27.0/components/prism-java.min.js"></script>
+<script src="//unpkg.com/prismjs@1.27.0/components/prism-json.min.js"></script>
+<script src="//unpkg.com/prismjs@1.27.0/components/prism-markdown.min.js"></script>
+<script src="//unpkg.com/prismjs@1.27.0/components/prism-nginx.min.js"></script>
+<script src="//unpkg.com/prismjs@1.27.0/components/prism-properties.min.js"></script>
+<script src="//unpkg.com/prismjs@1.27.0/components/prism-sql.min.js"></script>
+<script src="//unpkg.com/prismjs@1.27.0/components/prism-python.min.js"></script>
+<script src="//unpkg.com/prismjs@1.27.0/components/prism-cpp.min.js"></script>
+<script src="//unpkg.com/prismjs@1.27.0/components/prism-xml-doc.min.js"></script>
+<script src="//unpkg.com/prismjs@1.27.0/components/prism-yaml.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-less.min.js"></script>
+<!-- emoji -->
+<script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script>
+<!-- 剪切代码 -->
+<script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
+<!-- 分页导航 -->
+<script src="//cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
+<!-- plantuml -->
+<script src="//unpkg.com/docsify-plantuml/dist/docsify-plantuml.min.js"></script>
+<!-- Tab -->
+<script src="https://cdn.jsdelivr.net/npm/docsify-tabs@1"></script>
+<!-- discussion -->
+<!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.css">
+  <script src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/gitalk.min.js"></script>
+  <script>
+    const gitalk = new Gitalk({
+      clientID: '2e9677843c474642164',
+      clientSecret: '7af6573bbab3cd4a94fd27dbf18d6c6c119a025',
+      repo: 'docsifyGuide',
+      owner: 'pycrab',
+      admin: ['pycrab'],
+      distractionFreeMode: true
+    })
+  </script> -->
+
+<!-- mermaid -->
+<script src="//unpkg.com/mermaid@8.14.0/dist/mermaid.min.js"></script>
+<script>
+  // mermaid
+  var num = 0;
+  mermaid.initialize({ startOnLoad: false });
+</script>
+
+
+</html>
