@@ -1,10 +1,9 @@
-- Home
-  - [Home](/README.md)
+- [Home](/README.md)
 - Architecture
   - [Overview](/architecture/overview.md)
 - Third-Party
   - [Overview](/thirdparty/overview.md)
-  - [envpool](/thirdparty/envpool.md)
+  - [Envpool](/thirdparty/envpool.md)
 - Tools
   - [Git](/tools/git.md)
   - [Docker](/tools/docker.md)
