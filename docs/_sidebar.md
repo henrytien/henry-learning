@@ -3,8 +3,8 @@
 - Architecture
   - [Overview](/architecture/overview.md)
 - Third-Party
-  - [Overview](/thirdparty/overview.md)
-  - [Envpool](/thirdparty/envpool.md)
+  - [Overview](/third_party/overview.md)
+  - [Envpool](/third_party/envpool.md)
 - Tools
   - [Git](/tools/git.md)
   - [Docker](/tools/docker.md)
