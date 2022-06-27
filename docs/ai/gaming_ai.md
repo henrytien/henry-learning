@@ -123,3 +123,4 @@
 
 1. [网易游戏用19个案例告诉你，怎么用AI技术赋能游戏](https://game.academy.163.com/course/careerArticle?course=610&isMaster=0)
 2. [ChoreoMaster](https://github.com/NetEase-GameAI/ChoreoMaster) "ChoreoMaster: Choreography -Oriented Music Driven Dance Synthesis"
+3. [[SIGGRAPH 2021] ChoreoMaster : Choreography-Oriented Music-Driven Dance Synthesis](https://www.youtube.com/watch?v=V8MlYa_yhF0)
