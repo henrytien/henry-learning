@@ -1,4 +1,6 @@
 - [Home](/README.md)
+- AI
+  - [Gaming AI](/ai/gaming_ai.md)
 - Architecture
   - [Overview](/architecture/overview.md)
 - Third-Party

@@ -1,5 +1,7 @@
 - Getting Started
   - [Introduction](/)
+- AI
+  - [Gaming AI](/ai/gaming_ai.md)
 - Architecture
   - [Overview](/architecture/overview.md)
 - Third-Party
