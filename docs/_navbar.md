@@ -3,6 +3,7 @@
   - [Gaming AI](/ai/gaming_ai.md)
 - Architecture
   - [Overview](/architecture/overview.md)
+  - [Golang](/architecture/go.md)
 - Third-Party
   - [Overview](/third_party/overview.md)
   - [Envpool](/third_party/envpool.md)
@@ -10,6 +11,7 @@
   - [Git](/tools/git.md)
   - [Docker](/tools/docker.md)
   - [Bash](/tools/bash.md)
+  - [Cmake](/tools/cmake.md)
 - FAQ
   - [Faq](/faq.md)
 <!-- - Language / 语言
