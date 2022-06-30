@@ -14,22 +14,32 @@ add_library(math src/math.cc)
 add_executable(cmake-learning src/main.cc)
 target_link_libraries(cmake-learning math)
 
-# # Third-party library
-# include(ExternalProject)
-# ExternalProject_Add(googletest
-#     PREFIX "${CMAKE_BINARY_DIR}/lib"
-#     GIT_REPOSITORY "https://github.com/google/googletest.git"
-#     GIT_TAG "main"
-#     CMAKE_ARGS -CMAKE_INSTALL_PREFIX=${CMAKE_BINARY_DIR}/lib/installed
-# )
+# Third-party library
+include(ExternalProject)
+ExternalProject_Add(googletest
+    PREFIX "${CMAKE_BINARY_DIR}/lib"
+    GIT_REPOSITORY "https://github.com/google/googletest.git"
+    GIT_TAG "main"
+    CMAKE_ARGS -CMAKE_INSTALL_PREFIX=${CMAKE_BINARY_DIR}/lib/installed
+)
 
-# # Prevent build on all targets build
-# set_target_properties(googletest PROPETIES EXCLUDE_FROM_ALL TRUE)
+# Prevent build on all targets build
+set_target_properties(googletest PROPERTIES  EXCLUDE_FROM_ALL TRUE)
 
-# # Define $(CMAKE_INSTALL_...) variables
-# include(GNUInstallDirs)
+# Define $(CMAKE_INSTALL_...) variables
+include(GNUInstallDirs)
 
-# # Specify where third-party libraries are located
-# link_directories(${CMAKE_BINARY_DIR}/lib/installed/${CMAKE_INCLUDE_LIBDIR})
-# include_directories(${CMAKE_BINARY_DIR}/lib/installed/${CMAKE_INSTALL_INCLUDEDIR})
+# Specify where third-party libraries are located
+link_directories(${CMAKE_BINARY_DIR}/lib/installed/${CMAKE_INCLUDE_LIBDIR})
+include_directories(${CMAKE_BINARY_DIR}/lib/installed/${CMAKE_INSTALL_INCLUDEDIR})
 
+# This is required for googletest
+find_package(Threads REQUIRED)
+
+# Test
+add_executable(math_test test/math_test.cc)
+target_link_libraries(math_test math gtest Threads::Threads)
+
+# Mkae sure third-party is built before executable
+add_dependencies(math_test googletest)
+set_target_properties(math_test PROPERTIES EXCLUDE_FROM_ALL TRUE)
