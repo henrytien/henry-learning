@@ -1,0 +1,3 @@
+[submodule "src/third-party/cmake-examples"]
+	path = src/third-party/cmake-examples
+	url = https://github.com/ttroy50/cmake-examples.git
