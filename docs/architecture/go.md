@@ -1,11 +1,23 @@
 # Golang学习
 
+## Golang learning mindmap
+```plantuml
+@startmindmap
+* Golang
+-- 基础知识
+--- 数据结构
+---- 数组
+---- 切片
+---- 哈希表
+---- 字符串
+--- 语言特性
+@endmindmap
+```
 
 
-
-
-
-
+## Basics
+### How to Use Go Modules
+[How to Use Go Modules](https://www.digitalocean.com/community/tutorials/how-to-use-go-modules)
 
 
 ## go命令和常用工具
