@@ -1,6 +1,6 @@
 # Golang学习
 
-## Golang learning mindmap
+## Golang mindmap
 ```plantuml
 @startmindmap
 <style>
@@ -73,11 +73,25 @@ left side
 @endmindmap
 ```
 
+## 第一部分 预备知识
+### 第一章 准备工作
+1.1 调试源代码
+1.1.1 编译源码
+```shell
+./src/make.bash
+```
 
-## Basics
-### How to Use Go Modules
-[How to Use Go Modules](https://www.digitalocean.com/community/tutorials/how-to-use-go-modules)
+1.1.2 中间代码
+```shell
+GOSSAFUNC=main go build helloworld.go
+# runtime
+dumped SSA to /home/henry/GitHub/go-swimming/src/appengine/go11x/helloworld/ssa.html
+# command-line-arguments
+dumped SSA to ./ssa.html
+```
 
+1.1.3 小结
+> 如果我们想要研究源代码的详细编译优化过程，可以使用上面提到的 SSA 中间代码深入研究 Go 语言的中间代码以及编译优化的方式，不过只要我们想了解 Go 语言的实现原理，阅读源代码是绕不开的过程。
 
 ## go命令和常用工具
 
