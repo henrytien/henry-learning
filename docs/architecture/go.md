@@ -72,28 +72,7 @@ left side
 ---- 逃逸分析 
 @endmindmap
 ```
-
-## 第一部分 预备知识
-### 第一章 准备工作
-1.1 调试源代码
-1.1.1 编译源码
-```shell
-./src/make.bash
-```
-
-1.1.2 中间代码
-```shell
-GOSSAFUNC=main go build helloworld.go
-# runtime
-dumped SSA to /home/henry/GitHub/go-swimming/src/appengine/go11x/helloworld/ssa.html
-# command-line-arguments
-dumped SSA to ./ssa.html
-```
-
-1.1.3 小结
-> 如果我们想要研究源代码的详细编译优化过程，可以使用上面提到的 SSA 中间代码深入研究 Go 语言的中间代码以及编译优化的方式，不过只要我们想了解 Go 语言的实现原理，阅读源代码是绕不开的过程。
-
-## go命令和常用工具
+**Go命令和常用工具**
 
 ```shell
 #GOPROXY
@@ -145,13 +124,34 @@ go mod why         解释为什么需要依赖
 
 go list 命令
 go list -m -f '{{if not .Indirect}}{{.Path}}{{end}}' all # 查看项目所有依赖包
-
-
+```
+## 第一部分 预备知识
+### 第一章 准备工作
+#### 1.1 调试源代码
+1.1.1 编译源码
+```shell
+./src/make.bash
 ```
 
+1.1.2 中间代码
+```shell
+GOSSAFUNC=main go build helloworld.go
+# runtime
+dumped SSA to /home/henry/GitHub/go-swimming/src/appengine/go11x/helloworld/ssa.html
+# command-line-arguments
+dumped SSA to ./ssa.html
+```
 
+1.1.3 小结
+> 如果我们想要研究源代码的详细编译优化过程，可以使用上面提到的 SSA 中间代码深入研究 Go 语言的中间代码以及编译优化的方式，不过只要我们想了解 Go 语言的实现原理，阅读源代码是绕不开的过程。
 
+### 第二章 编译原理
 
+#### 2.1 编译过程
+#### 2.2 词法分析和语法分析
+#### 2.3 类型检查
+#### 2.4 中间代码生成
+#### 2.5 机器码生成
 
 ## References
 
