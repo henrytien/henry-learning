@@ -3,14 +3,73 @@
 ## Golang learning mindmap
 ```plantuml
 @startmindmap
-* Golang
--- 基础知识
---- 数据结构
----- 数组
----- 切片
----- 哈希表
----- 字符串
---- 语言特性
+<style>
+mindmapDiagram {
+  .green {
+    BackgroundColor lightgreen
+  }
+  .rose {
+    BackgroundColor #FFBBCC
+  }
+  .blue {
+    BackgroundColor lightblue
+  }
+  .orange {
+    BackgroundColor #Orange 
+  }
+}
+</style>
++ Go 语言设计与实现 <<rose>>
+++ 基础知识
++++ 数据结构 <<green>>
+++++ 数组
+++++ 切片
+++++ 哈希表
+++++ 字符串 
++++ 数据结构 <<green>>
+++++ 函数调用 
+++++ 反射 
+++++ 接口 
+++ 进阶知识
++++ 元编程 <<green>>
+++++ 插件系统 
+++++ 代码生成 
+++++ 反射 
++++ 标准库 <<green>>
+++++ JSON 
+++++ HTTP 
+++++ RPC 
+++++ 数据库 
+++++ 格式化I/O 
+left side
+-- 编译原理 
+--- 编译器 <<blue>>
+---- 概述
+---- 词法和语法分析 
+---- 类型检查 
+---- 中间代码生成 
+---- 机器码生成 
+--- 关键字 <<blue>>
+---- panic 和 recover 
+---- select 
+---- for 和 range 
+---- defer 
+---- make 和 new 
+
+-- 运行时  
+--- 并发编程 <<orange>> 
+---- 上下文 
+---- 同步源语 
+---- 定时器 
+---- Channel 
+---- 调度器 
+---- 网络轮询器 
+---- 系统监控 
+--- 内存管理 <<orange>> 
+---- 内存分配  
+---- 垃圾收集 
+---- 栈空间管理 
+---- 逃逸分析 
 @endmindmap
 ```
 
@@ -59,7 +118,6 @@ godoc -src fmt Printf：查看fmt.Printf的代码
  
 go run 编译并运行Go程序
 
-
 go mode 命令
 
 go mod download    下载依赖的module到本地cache（默认为$GOPATH/pkg/mod目录）
@@ -83,4 +141,4 @@ go list -m -f '{{if not .Indirect}}{{.Path}}{{end}}' all # 查看项目所有依
 
 ## References
 
-- 
+- [Go 语言设计与实现](https://draven.co/golang/)
