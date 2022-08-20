@@ -5,7 +5,8 @@
 - Architecture
   - [Overview](/architecture/overview.md)
   - [Golang](/architecture/go.md)
-
+- Game
+  - [Elo](/game/elo.md)
 - Third-Party
   - [Overview](/third_party/overview.md)
   - [Envpool](/third_party/envpool.md)
