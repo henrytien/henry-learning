@@ -26,6 +26,102 @@
 
 第三，作为一个发展了几十年的老牌开源软件，**Vim 也有着良好的生态环境**。
 
+> 有一颗勇于探索的心，愿意花点力气把手里的“武器”打造得更为好用、称心。
+
+### 01｜各平台下的 Vim 安装方法：上路前准备好你的宝马
+
+**Red Hat 和 CentOS 系列**
+
+`yum list installed | grep vim`
+
+此时，我建议使用 `sudo yum install vim-X11` 来安装图形界面的 Vim，或至少使用
+`sudo yum install vim-enhanced` 来安装增强版本的 Vim（如果你不在这台机器上
+进行图形界面登录的话）。
+
+**Debian 和 Ubuntu 系列**
+
+> 如果你使用标准的 GNOME 桌面环境的话（大部分的情况），安装 vim-gtk3 或 vimgnome。
+> 如果你使用 KDE 桌面的话，安装 vim-gtk。
+> 如果你只使用文本界面的话，安装 vim-nox。
+
+`apt list --installed | grep vim`
+
+**手工编译**
+
+```shell
+./configure --enable-pythoninterp \
+--enable-python3interp \
+--enable-gui=auto
+make -j
+sudo make install
+```
+
+**macOS 下的安装**
+
+如果你希望使用图形界面，则需要自行安装 MacVim，一个跟现代 macOS 融合较好的独立 Vim 版本。
+
+在安装了 Homebrew 之后，一般情况下，你需要修改你的 .bash_profile（如果使用 Bash
+的话）、.zprofile（如果使用 Zsh 的话）或是相应的 shell 的配置文件，调整 PATH，把
+/usr/local/bin 放到 /usr/bin 前面。我个人在 .bash_profile 里是这样配置的：
+
+```shell
+if [[ $PATH != "$HOME/bin"* ]]; then
+PATH=~/bin:/usr/local/bin:/usr/local/sbin:`echo $PATH|sed -e "s!:$HOME/bin!!
+fi
+```
+
+如果你这样配置的话，那只要执行 brew install macvim，然后在等待安装完成之后，
+你用 vim 启动的就是 MacVim 了。跟 Homebrew 里的其他软件一样，你以后要升级 MacVim 的话，只需要输入命令 brew upgrade macvim 即可。
+
+### 02｜基本概念和基础命令：应对简单的编辑任务
+
+> 一个键最多有三排内容：最底下是直接按键的结果，中间是按下 Shift 的结果
+> （变大写），上面偏右的小字是按下 Ctrl 的结果。我们还用了一些特殊符号来表示操作的位置，如果你已经了解了这些命令的功能，你也自然就明白它们的意义了。
+
+![](../assets/images/2022-09-01-14-01-35-image.png)
+
+“:q!”：退出 Vim
+“:wq”：存盘退出
+“:s”：执行替换
+“:!”：执行外部命令
+“:edit”（一般缩写为 “:e”）：编辑文件
+“:w”：写文件
+“:r”：读文件
+“:help”：查看帮助 
+
+把撤销文件放在用户个人的特定目录下，既保证了安全，又免去了其他目录下出现不必要文件的麻烦。要达到这个目的，我在 Linux/macOS 下会这么写：
+
+```shell
+set nobackup
+set undodir=~/.vim/undodir
+```
+
+```
+if !isdirectory(&undodir)
+    call mkdir(&undodir, 'p', 0700)
+endifif
+```
+
+Mac 系统实时显示键位操作软件：[KeyCastr](https://github.com/keycastr/keycastr)
+
+
+
+### 03｜更多常用命令：应对稍复杂的编辑任务
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ## 参考
