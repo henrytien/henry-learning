@@ -108,9 +108,27 @@ Mac 系统实时显示键位操作软件：[KeyCastr](https://github.com/keycast
 
 ### 03｜更多常用命令：应对稍复杂的编辑任务
 
+这些选择动作的基本附加键是 a 和 i。其中，a 可以简单理解为英文单词 a，表示选定后
+续动作要求的完整内容，而 i 可理解为英文单词 inner，代表后续动作要求的内容的“内
+部”
 
+`c2i{`
 
+![](https://static001.geekbang.org/resource/image/16/bd/16a886bf009e689bdbaf3e3fd4ca69bd.gif?wh=664*485)
 
+**行内查找重复**
+
+有时候我们想要在当前行内查找一个字符，我们可以通过`f{char}/t{char}`来从当前位置开始到行尾进行查找，也可以通过`F{char}/T{char}`从当前位置开始到行首进行查找。简单的说就是小写向后找，大写向前找。
+
+> ```shell
+> ;                       Repeat latest f, t, F or T [count] times. See cpo-;
+> 
+>                                                         ,
+> ,                       Repeat latest f, t, F or T in opposite direction
+>                         [count] times. See also cpo-;
+> ```
+
+![Alt text](https://img-blog.csdn.net/20150614233246892)
 
 
 
@@ -127,3 +145,4 @@ Mac 系统实时显示键位操作软件：[KeyCastr](https://github.com/keycast
 ## 参考
 
 - [How do I exit Vim?](https://stackoverflow.com/questions/11828270/how-do-i-exit-vim)
+- [Vim技巧之重复](https://blog.csdn.net/ii1245712564/article/details/46496347)
