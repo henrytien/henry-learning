@@ -143,19 +143,20 @@
 <script src="//cdn.jsdelivr.net/gh/jerryc127/butterfly_cdn@2.1.0/js/click_heart.js"></script>
 <!-- discussion -->
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.css">
-  <script src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/gitalk.min.js"></script>
-  <script>
-    const gitalk = new Gitalk({
-      clientID: '675d9eb8e50dbb6009c6',
-      clientSecret: '0a2f56260be41c2d6f85064568e8166c4d668c31',
-      repo: 'henrytien-learning',
-      owner: 'henrytien',
-      admin: ['henrytien'],
-      distractionFreeMode: true
-    })
-  </script>
 
+<script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/gitalk.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
+<script>
+  const gitalk = new Gitalk({
+    clientID: '675d9eb8e50dbb6009c6',
+    clientSecret: '0a2f56260be41c2d6f85064568e8166c4d668c31',
+    repo: 'https://github.com/henrytien/henry-learning',
+    owner: 'henrytien',
+    admin: ['henrytien'],
+    // facebook-like distraction free mode
+    distractionFreeMode: false
+  })
+</script>
 <!-- mermaid -->
 <script src="//unpkg.com/mermaid@8.14.0/dist/mermaid.min.js"></script>
 <script>
