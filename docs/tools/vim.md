@@ -104,8 +104,6 @@ endifif
 
 Mac 系统实时显示键位操作软件：[KeyCastr](https://github.com/keycastr/keycastr)
 
-
-
 ### 03｜更多常用命令：应对稍复杂的编辑任务
 
 这些选择动作的基本附加键是 a 和 i。其中，a 可以简单理解为英文单词 a，表示选定后
@@ -130,17 +128,7 @@ Mac 系统实时显示键位操作软件：[KeyCastr](https://github.com/keycast
 
 ![Alt text](https://img-blog.csdn.net/20150614233246892)
 
-
-
-
-
-
-
-
-
-
-
-
+### 04｜初步定制：让你的 Vim 更顺手
 
 ## 参考
 
