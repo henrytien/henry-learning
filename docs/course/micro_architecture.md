@@ -66,8 +66,6 @@
 
 ## 09丨微服务最经典的三种服务发现机制
 
-
-
 ![](../assets/images/2022-09-09-10-14-39-image.png)
 
 传统的LBS解析到不同的服务。LBS单点。
@@ -99,5 +97,3 @@ For example, If a given service fails, a service mesh can collect data on how lo
 - [Service meshes in a microservices architecture](https://cloud.google.com/architecture/service-meshes-in-microservices-architecture#:~:text=A%20service%20mesh%20is%20a,microservices%20on%20a%20chosen%20infrastructure.)
 
 - [Google Cloud Architecture Framework: System design](https://cloud.google.com/architecture/framework/system-design)
-
-
