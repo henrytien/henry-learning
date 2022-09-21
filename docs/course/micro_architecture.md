@@ -92,6 +92,52 @@ That’s because a service mesh also captures every aspect of service-to-service
 
 For example, If a given service fails, a service mesh can collect data on how long it took before a retry succeeded. As data on failure times for a given service aggregates, rules can be written to determine the optimal wait time before retrying that service, ensuring that the system does not become overburdened by unnecessary retries.
 
+
+
+## 10丨微服务 API 服务网关（一）原理
+
+![](../assets/images/2022-09-21-15-18-13-image.png)
+
+## ![](../assets/images/2022-09-21-15-20-04-image.png)
+
+反向路由、认证安全、限流熔断、日志监控。
+
+## 11丨微服务 API 服务网关（二）开源网关 Zuul
+
+![](../assets/images/2022-09-21-15-24-49-image.png)
+
+  ![](../assets/images/2022-09-21-15-28-58-image.png) 
+
+## 12丨跟 Netflix 学习微服务路由发现体系
+
+![](../assets/images/2022-09-21-15-30-42-image.png)
+
+Eureka 和 Zuul
+
+## 13丨集中式配置中心的作用和原理是什么？
+
+![](../assets/images/2022-09-21-16-22-58-image.png)
+
+![](../assets/images/2022-09-21-16-27-18-image.png) 
+
+## 14丨微服务通讯方式 RPC vs REST
+
+ ![](../assets/images/2022-09-21-16-31-18-image.png)
+
+## 15丨微服务框架需要考虑哪些治理环节？
+
+![](../assets/images/2022-09-21-16-39-07-image.png)
+
+## 16丨微服务监控系统分层和监控架构
+
+
+
+![](../assets/images/2022-09-21-16-48-19-image.png)
+
+
+
+![](../assets/images/2022-09-21-16-53-49-image.png)
+
 ## 参考
 
 - [Service meshes in a microservices architecture](https://cloud.google.com/architecture/service-meshes-in-microservices-architecture#:~:text=A%20service%20mesh%20is%20a,microservices%20on%20a%20chosen%20infrastructure.)
